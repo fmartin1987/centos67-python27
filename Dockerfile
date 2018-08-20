@@ -20,3 +20,8 @@ RUN \
     python2.7 /usr/src/setuptools-1.4.2/setup.py install && \
     curl -k1 https://bootstrap.pypa.io/get-pip.py | python2.7 - && \
     rm /usr/src/setuptools-1.4.2.tar.gz
+
+# YUM Clean
+RUN \
+    rpm --rebuilddb && \
+    yum clean all
