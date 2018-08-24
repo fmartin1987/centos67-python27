@@ -2,7 +2,7 @@ FROM centos:6.7
 
 # Python 2.7
 RUN \
-    yum install -y wget curl openssl-devel sqlite-devel bzip2-devel tar xz xz-libs gcc && \
+    yum install -y wget curl strace telnet yum-plugin-ovl openssl-devel sqlite-devel bzip2-devel tar xz xz-libs gcc && \
     wget http://www.python.org/ftp/python/2.7.6/Python-2.7.6.tar.xz -P /usr/src/ && \
     xz -d /usr/src/Python-2.7.6.tar.xz && \
     tar -xf /usr/src/Python-2.7.6.tar -C /usr/src/ && \
